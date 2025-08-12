@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account sign in: Starbucks</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="/Image/star buck log.png" alt="" class="logo">
+        </div>
+        
+    </div>
+
+    <div class="main-container">
+        <h1 class="signin-heading">Sign in or create an account</h1>
+        
+        <div class="form-card">
+            <div class="required-field">
+                <span class="asterisk">*</span> indicates required field
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label class="form-label">
+                        
+                    </label>
+                    <input type="text" class="form-input" required placeholder="* Username or email address">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        
+                    <div class="password-container">
+                        <input type="password" class="form-input" required  placeholder="*Password">
+                        <button type="button" class="password-toggle">👁️</button>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <button type="button" class="checkbox"></button>
+                    <label class="checkbox-label">Keep me signed in</label>
+                    <a href="#" class="details-link">Details</a>
+                </div>
+
+                <div class="forgot-links">
+                    <a href="#" class="forgot-link">Forgot your username?</a>
+                    <a href="#" class="forgot-link">Forgot your password?</a>
+                </div>
+
+                <button type="submit" class="signin-button">Sign in</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Password toggle functionality
+        document.querySelector('.password-toggle').addEventListener('click', function() {
+            const passwordInput = document.querySelector('input[type="password"]');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                this.textContent = '👁️';
+            }
+        });
+
+        // Checkbox functionality
+        document.querySelector('.checkbox').addEventListener('click', function() {
+            this.classList.toggle('checked');
+        });
+    </script>
+</body>
+</html>
+

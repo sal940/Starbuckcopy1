@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an account: Starbucks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start;
+            max-width: 1200px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .header-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            flex-grow: 1;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        .create-account-heading {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .rewards-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .rewards-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .rewards-description {
+            font-size: 16px;
+            color: #000000;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .more-link {
+            color: #006241;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .form-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .required-field {
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 30px;
+        }
+
+        .required-field .asterisk {
+            color: #006241;
+        }
+
+        .section-heading {
+            background-color: #0066cc;
+            color: white;
+            padding: 15px 20px;
+            margin: 0 -30px 20px -30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-label .asterisk {
+            color: #006241;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d1d1;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #006241;
+            box-shadow: 0 0 0 2px rgba(0, 97, 65, 0.1);
+        }
+
+        .account-security-heading {
+            background-color: #f8f9fa;
+            color: #000000;
+            padding: 15px 20px;
+            margin: 30px -30px 20px -30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 480px) {
+            .form-card {
+                padding: 20px;
+            }
+            
+            .create-account-heading {
+                font-size: 28px;
+            }
+            
+            .section-heading,
+            .account-security-heading {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Image/star buck log.png" alt="Starbucks Logo" class="logo">
+    </div>
+
+    <div class="header-divider"></div>
+
+    <div class="main-container">
+        <h1 class="create-account-heading">Create an account</h1>
+        
+        <div class="rewards-section">
+            <div class="rewards-title">STARBUCKS® REWARDS</div>
+            <p class="rewards-description">
+                Join Starbucks Rewards to earn Stars for free food and drinks, any way you pay. 
+                Get access to mobile ordering, a birthday Reward, and <span class="more-link">more.</span>
+            </p>
+        </div>
+        
+        <div class="form-card">
+            <div class="required-field">
+                <span class="asterisk">*</span> indicates required field
+            </div>
+
+            <form>
+                <div class="section-heading">Personal Information</div>
+                
+                <div class="form-group">
+                    <label class="form-label">
+                        <span class="asterisk">*</span> First name
+                    </label>
+                    <input type="text" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <span class="asterisk">*</span> Last name
+                    </label>
+                    <input type="text" class="form-input" required>
+                </div>
+
+                <div class="account-security-heading">Account Security</div>
+                
+                <!-- Additional form fields would go here -->
+                <div class="form-group">
+                    <label class="form-label">
+                        <span class="asterisk">*</span> Email address
+                    </label>
+                    <input type="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <span class="asterisk">*</span> Password
+                    </label>
+                    <input type="password" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <span class="asterisk">*</span> Confirm password
+                    </label>
+                    <input type="password" class="form-input" required>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
