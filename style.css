@@ -40,6 +40,16 @@ header {
     transition: all 0.3s ease;
 }
 
+.navigation a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #00754a;
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -50,17 +60,7 @@ ul {
 
 li {
     margin-left: 20px;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.3s ease;
-}
-
-.navigation a:hover {
-    color: #005c3c;
-}
+}   
 
 .maplogo {
     width: 20px;
@@ -89,7 +89,7 @@ li {
 }
 
 .find a:hover {
-    color: #005c3c;
+    color: #00754a;
 }
 
 .map {
@@ -108,7 +108,7 @@ li {
 
 .button a {
     text-decoration: none;
-    color: #000;
+    color: #fffcfc;
     font-weight: 800;
 }
 
@@ -121,6 +121,9 @@ li {
     border: 1px solid #000;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+.signin a {
+    color: #000;
 }
 
 .signin:hover {
@@ -239,10 +242,20 @@ li {
     padding: 0;
     margin: 0;
     flex-grow: 1;
+    
+}
+.mobile-nav-menu ul {
+    display: flex;
+    flex-direction: row;
+}
+.mobile-nav-menu a {
+    text-decoration: none;
+    color: #005c3c;
 }
 
 .mobile-nav-menu li {
     border-bottom: 1px solid #e5e5e5;
+   
 }
 
 

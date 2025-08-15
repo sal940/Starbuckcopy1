@@ -1,12 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background-color: #1a362a;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* Hamburger Menu Icon */
+        .menu-toggle {
+            cursor: pointer;
+            display: block;
+        }
+        
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+            list-style: none;
+            background-color: #333;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            display: none;
+            flex-direction: column;
+        }
+        
+        .nav-links.active {
+            display: flex;
+        }
+        
+        .nav-links li {
+            padding: 15px 20px;
+            border-top: 1px solid #444;
+        }
+        
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links li:hover {
+            background-color: #555;
+        }
+        
+        /* For larger screens - desktop view */
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+            
+            .nav-links {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                width: auto;
+                background-color: transparent;
+            }
+            
+            .nav-links li {
+                border-top: none;
+                padding: 0 15px;
+            }
+        }
+
 .logo {
     width: 50px;
     height: 50px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 10px;
 }
 hr {
@@ -40,14 +124,11 @@ hr {
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     background-color: #f0f0f0;
-
-    
 }
 .form-group-item {
     align-items: center;
     justify-content: center;
     margin: 60px;
-
 }
 .Name {
     margin-left: 20px;
@@ -79,7 +160,6 @@ hr {
     width: 90%;
     padding: 10px;
     border-radius: 10px;
-    
 }
 .create-account-button {
     width: 50%;
@@ -90,5 +170,86 @@ hr {
     color: #f0f0f0;
     background-color:#00704A;
     margin-top: 20px;
+}
 
+/* === Responsive Adjustments === */
+
+/* Large Desktops (1200px and above) - Your existing styles */
+@media (min-width: 1200px) {
+    .header-text {
+        max-width: 450px;
+        padding: 30px;
+    }
+    .form-group {
+        padding: 40px;
+    }
+    .personal-info {
+        font-size: 32px;
+        margin-bottom: 35px;
+        padding: 14px;
+        font-size:17px;
+    }
+    .h3 {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .signin-button {
+        padding: 14px 35px;
+        font-size: 17px;
+    }
+}
+
+/* Medium Devices (Tablets, 768px - 991px) */
+@media (max-width: 991px) {
+    .form-group {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .create-account-button {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+/* Small Devices (Large Phones, 576px - 767px) */
+@media (max-width: 767px) {
+    .form-group {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 15px;
+    }
+    .form-group-item {
+        margin: 30px;
+    }
+    .create-account-button {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+/* Extra Small Devices (Phones, 0 - 575px) */
+@media (max-width: 575px) {
+    .form-group {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        padding: 10px;
+    }
+    .form-group-item {
+        margin: 15px;
+    }
+    .personal-info input,
+    .account-security input {
+        width: 95%;
+    }
+    .create-account-button {
+        width: 95%;
+        margin-left: 2.5%;
+        height: 45px;
+    }
+    .header-text {
+        font-size: 18px;
+    }
 }

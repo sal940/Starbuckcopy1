@@ -1,147 +1,95 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
 }
-
-body {
-    overflow-x: hidden;
-}
-
-header {
-    display: flex;
-    margin-top: 10px;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    flex-wrap: wrap;
-}
-
-.logo {
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-    flex-shrink: 0;
-}
-
-.navigation {
-    display: flex;
-    margin-left: 80px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #000;
-    text-decoration: none;
-    list-style: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.3s ease;
-}
-
-.navigation a:hover {
-    color: #00754a;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    list-style: none;
-    margin-top: 10px;
-}
-
-li {
-    margin-left: 20px;
-}   
-
-.maplogo {
-    width: 20px;
-    height: 20px;
-    margin-top: 36px;
-    margin-left: 80px;
-}
-
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: auto;
-}
+            background-color: #1a362a;
+            color: rgb(245, 245, 245);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .logo {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+        flex-shrink: 0;
+            }
+        
+        /* Hamburger Menu Icon */
+        .menu-toggle {
+            cursor: pointer;
+            display: block;
+        }
+        
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+            list-style: none;
+            background-color: #333;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            display: none;
+            flex-direction: column;
+            z-index: 2;
+            position:absolute;
+        }
+        
+        .nav-links.active {
+            display: flex;
+        }
+        
+        .nav-links li {
+            padding: 15px 20px;
+            border-top: 1px solid #444;
+        }
+        
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links li:hover {
+            background-color: #555;
+        }
+        
+        /* For larger screens - desktop view */
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+            
+            .nav-links {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                width: auto;
+                background-color: transparent;
+            }
+            
+            .nav-links li {
+                border-top: none;
+                padding: 0 15px;
+            }
+        }
 
-.find {
-    margin-right: 30px;
-    font-weight: 500;
-}
 
-.find a {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.3s ease;
-}
-
-.find a:hover {
-    color: #00754a;
-}
-
-.map {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-}
-
-.button {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: auto;
-}
-
-.button a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 800;
-}
-
-.signin {
-    width: 80px;
-    height: 30px;
-    margin-right: 10px;
-    border-radius: 15px;
-    background-color: #ffffff;
-    border: 1px solid #000;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.signin:hover {
-    background-color: #8f8e8e;
-    color: #ffffff;
-}
-
-.join {
-    width: 100px;
-    height: 30px;
-    margin-right: 10px;
-    border-radius: 15px;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.join:hover {
-    background-color: #595757;
-    color: #ffffff;
-}
 
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
@@ -279,17 +227,7 @@ li {
     height: 20px;
 }
 
-/* Bar Section */
-.bar {
-    font-size: 8px;
-    font-weight: 400;
-    background-color: #1a362a;
-    color: #ffffff;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    padding: 20px;
-}
+
 
 .bar-text {
     margin-left: 50px;
@@ -308,6 +246,7 @@ li {
     z-index: 10;
     gap: 30px;
     overflow-x: auto;
+    z-index: 1;
 }
 
 .top-nav a {
@@ -630,13 +569,7 @@ li {
 /* Tablet Portrait (481px - 767px) */
 @media (max-width: 767px) and (min-width: 481px) {
     /* Hide desktop navigation */
-    .navigation {
-        display: none;
-    }
     
-    .navbar {
-        display: none;
-    }
     
     /* Show mobile menu toggle */
     .mobile-menu-toggle {
@@ -656,12 +589,7 @@ li {
         margin-left: 0;
     }
     
-    .bar {
-        padding: 15px;
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-    }
+    
     
     .bar-text {
         margin-left: 0;
@@ -753,13 +681,8 @@ li {
 /* Mobile Large (375px - 480px) */
 @media (max-width: 480px) and (min-width: 376px) {
     /* Hide desktop navigation */
-    .navigation {
-        display: none;
-    }
     
-    .navbar {
-        display: none;
-    }
+    
     
     /* Show mobile menu toggle */
     .mobile-menu-toggle {
@@ -780,12 +703,7 @@ li {
         margin-left: 0;
     }
     
-    .bar {
-        padding: 10px;
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-    }
+    
     
     .bar-text h1 {
         font-size: 14px;
@@ -891,13 +809,7 @@ li {
 /* Mobile Small (320px - 375px) */
 @media (max-width: 375px) {
     /* Hide desktop navigation */
-    .navigation {
-        display: none;
-    }
     
-    .navbar {
-        display: none;
-    }
     
     /* Show mobile menu toggle */
     .mobile-menu-toggle {
@@ -918,12 +830,7 @@ li {
         margin-left: 0;
     }
     
-    .bar {
-        padding: 8px;
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-    }
+    
     
     .bar-text h1 {
         font-size: 12px;

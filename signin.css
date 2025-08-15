@@ -9,40 +9,112 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden;
+    display: flex;
+    
+    
 }
 
-.header {
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: flex-start;
-    max-width: 1200px;
-    position: relative;
-    align-items: center;
-}
+
+
+ body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background-color: #1a362a;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 2;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* Hamburger Menu Icon */
+        .menu-toggle {
+            cursor: pointer;
+            display: block;
+        }
+        
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+            list-style: none;
+            background-color: #333;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            display: none;
+            flex-direction: column;
+        }
+        
+        .nav-links.active {
+            display: flex;
+        }
+        
+        .nav-links li {
+            padding: 15px 20px;
+            border-top: 1px solid #444;
+        }
+        
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links li:hover {
+            background-color: #555;
+        }
+        
+        /* For larger screens - desktop view */
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+            
+            .nav-links {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                width: auto;
+                background-color: transparent;
+            }
+            
+            .nav-links li {
+                border-top: none;
+                padding: 0 15px;
+            }
+        }
 
 .logo {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #006241 0%, #00754a 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
+    margin-left: 10px;
+    margin-top: 10px;
 }
-
-.logo:hover {
-    transform: scale(1.05);
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
 }
 
 .main-container {
@@ -112,6 +184,7 @@ body {
     background-color: #ffffff;
     position: relative;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
 }
 
 .form-input:focus {
